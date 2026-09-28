@@ -107,3 +107,13 @@ if(mfCard){
   });
   mfVisual?.addEventListener('pointerleave',()=>{mfCard.style.transform='rotateX(0deg) rotateY(0deg) translate3d(0,0,0)'});
 }
+
+// Preserve the exact projects scroll position when returning from a case.
+document.querySelectorAll('.detail-back').forEach(link=>{
+  link.addEventListener('click',e=>{
+    if(document.referrer && new URL(document.referrer).origin===location.origin && window.history.length>1){
+      e.preventDefault();
+      history.back();
+    }
+  });
+});
