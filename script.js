@@ -94,3 +94,16 @@ if(location.pathname.endsWith('/index.html') || location.pathname.endsWith('/per
     sessionStorage.removeItem('siteReturnHash');
   }
 }
+
+/* M-FLOWERS 3D card: cursor-driven tilt, no click required. */
+const mfCard=document.querySelector('[data-mf-tilt]');
+if(mfCard){
+  const mfVisual=mfCard.closest('.mflowers-project');
+  mfVisual?.addEventListener('pointermove',e=>{
+    const r=mfCard.getBoundingClientRect();
+    const x=(e.clientX-r.left)/r.width-.5;
+    const y=(e.clientY-r.top)/r.height-.5;
+    mfCard.style.transform=`rotateX(${-y*7}deg) rotateY(${x*9}deg) translate3d(${x*4}px,${y*4}px,0)`;
+  });
+  mfVisual?.addEventListener('pointerleave',()=>{mfCard.style.transform='rotateX(0deg) rotateY(0deg) translate3d(0,0,0)'});
+}

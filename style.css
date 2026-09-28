@@ -563,3 +563,48 @@ body.route-open{overflow:hidden}
 .case-note div{display:flex;gap:24px;flex-wrap:wrap;justify-content:flex-end}
 .case-note b{font-weight:500;color:#222}
 @media(max-width:700px){.mf-browser{inset:65px 16px 65px}.mf-top span:not(.mf-brand){display:none}.mf-hero{grid-template-columns:1fr}.mf-logo-wrap{display:none}.mf-copy{padding:24px}.mf-copy strong{font-size:27px}.detail-grid{grid-template-columns:1fr}.case-note{display:block}.case-note div{justify-content:flex-start;margin-top:14px}}
+
+/* M-FLOWERS 2K / 3D portfolio card */
+.mflowers-project{background:#eeeae2!important;padding:24px!important;overflow:hidden!important;perspective:1200px!important}
+.mf-3d-card{position:absolute;inset:66px 30px 68px;transform-style:preserve-3d;transition:transform .8s cubic-bezier(.16,.8,.2,1),filter .5s ease;will-change:transform;overflow:hidden;border-radius:28px;background:#c9822d;box-shadow:0 24px 60px rgba(35,25,15,.16)}
+.mflowers-project:hover .mf-3d-card{filter:saturate(1.04) contrast(1.02)}
+.mf-card-image{position:absolute;inset:0;transform:translateZ(0);overflow:hidden}
+.mf-card-image img{width:100%;height:100%;display:block;object-fit:cover;object-position:center;filter:saturate(1.05);transition:transform 1.2s cubic-bezier(.16,.8,.2,1)}
+.mflowers-project:hover .mf-card-image img{transform:scale(1.045)}
+.mf-card-glass{position:absolute;inset:0;background:linear-gradient(110deg,rgba(25,18,10,.28),rgba(25,18,10,.02) 48%,rgba(255,191,64,.12));mix-blend-mode:multiply}
+.mf-card-brand{position:absolute;left:28px;top:26px;display:flex;align-items:center;gap:11px;color:#fff;transform:translateZ(42px);font-size:12px;letter-spacing:.08em;font-weight:700}
+.mf-card-brand img{width:46px;height:46px;object-fit:cover;border-radius:50%;border:1px solid rgba(255,255,255,.35)}
+.mf-card-copy{position:absolute;left:30px;bottom:30px;color:#fff;transform:translateZ(48px);max-width:310px;text-shadow:0 2px 18px rgba(0,0,0,.16)}
+.mf-card-copy small{display:block;font-size:8px;letter-spacing:.16em;margin-bottom:12px;opacity:.88}
+.mf-card-copy strong{display:block;font-size:clamp(28px,3vw,48px);line-height:.86;letter-spacing:-.055em;font-weight:650}
+.mf-card-button{position:absolute;right:26px;bottom:26px;display:flex;align-items:center;gap:18px;padding:13px 15px 13px 18px;border:1px solid rgba(255,255,255,.72);border-radius:999px;color:#fff;background:rgba(255,255,255,.1);backdrop-filter:blur(12px);font-size:11px;transform:translateZ(58px);transition:transform .55s cubic-bezier(.22,.75,.2,1),background .4s ease}
+.mf-card-button b{font-size:16px;font-weight:400}
+.mf-card-button span{white-space:nowrap}
+.mflowers-project:hover .mf-card-button{transform:translate3d(7px,-3px,58px);background:rgba(255,255,255,.17)}
+.mf-card-orbit{position:absolute;border:1px solid rgba(255,255,255,.3);border-radius:50%;pointer-events:none;transform:translateZ(20px)}
+.orbit-1{width:190px;height:190px;right:-75px;top:-65px}.orbit-2{width:280px;height:280px;left:-160px;bottom:-180px}
+.mflowers-project .project-meta{position:relative;z-index:5;color:#6d6963!important}
+
+/* M-FLOWERS case page */
+.mf-case-page .detail-main{max-width:1360px}
+.mf-case-hero{margin:55px 0 85px;border-radius:30px;overflow:hidden;background:#e8dfd1;position:relative}
+.mf-case-hero img{display:block;width:100%;height:auto;aspect-ratio:16/10;object-fit:cover}
+.mf-case-hero-caption{position:absolute;left:24px;right:24px;bottom:24px;display:flex;justify-content:space-between;align-items:center;gap:20px;color:#fff}
+.mf-case-hero-caption span{font-size:10px;letter-spacing:.12em;background:rgba(20,18,15,.3);backdrop-filter:blur(14px);padding:11px 14px;border-radius:999px}
+.mf-case-hero-caption a{display:inline-flex;align-items:center;gap:22px;color:#fff;text-decoration:none;border:1px solid rgba(255,255,255,.7);border-radius:999px;padding:12px 15px 12px 18px;background:rgba(255,255,255,.08);backdrop-filter:blur(14px);font-size:11px}
+.mf-case-hero-caption b{font-size:15px;font-weight:400}
+.mf-case-intro{display:grid;grid-template-columns:.9fr 1.1fr;gap:9vw;border-top:1px solid rgba(20,20,20,.13);padding-top:58px;margin-bottom:95px}
+.mf-kicker{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#77736e}
+.mf-case-intro h2{font-size:clamp(48px,6.2vw,100px);line-height:.86;letter-spacing:-.07em;margin:28px 0 0}
+.mf-case-intro>div:last-child{max-width:620px}.mf-case-intro p{font-size:18px;line-height:1.42;margin:0 0 26px}
+.mf-case-gallery{display:grid;grid-template-columns:1.45fr .85fr;gap:12px;margin-bottom:95px}
+.mf-case-gallery figure{margin:0;border-radius:24px;overflow:hidden;background:#eee8dd}
+.mf-case-gallery img{width:100%;height:100%;display:block;object-fit:cover;min-height:440px}
+.mf-case-gallery figure:nth-child(2) img{min-height:440px}
+.mf-case-gallery figcaption{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#77736e;padding:15px 16px 18px}
+.mf-detail-grid{margin-top:0!important;gap:12px!important}
+.mf-detail-grid .project-detail-card{min-height:290px}
+.mf-case-facts{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid rgba(20,20,20,.14);border-bottom:1px solid rgba(20,20,20,.14);margin:28px 0 38px}
+.mf-case-facts>div{padding:20px 0;display:flex;flex-direction:column;gap:9px}.mf-case-facts>div+div{border-left:1px solid rgba(20,20,20,.1);padding-left:24px}.mf-case-facts span{font-size:9px;text-transform:uppercase;letter-spacing:.12em;color:#77736e}.mf-case-facts b{font-size:13px;font-weight:500}
+@media(max-width:900px){.mf-3d-card{inset:62px 16px 64px}.mf-card-copy{left:20px;bottom:20px}.mf-card-button{right:18px;bottom:18px}.mf-case-intro{grid-template-columns:1fr;gap:35px}.mf-case-gallery{grid-template-columns:1fr}.mf-case-gallery img,.mf-case-gallery figure:nth-child(2) img{min-height:0;aspect-ratio:1.35}.mf-case-facts{grid-template-columns:1fr}.mf-case-facts>div+div{border-left:0;border-top:1px solid rgba(20,20,20,.1);padding-left:0}.mf-case-hero-caption{left:14px;right:14px;bottom:14px}.mf-case-hero-caption span{display:none}}
+@media(max-width:560px){.mf-card-brand{left:18px;top:18px}.mf-card-brand img{width:38px;height:38px}.mf-card-copy{max-width:210px}.mf-card-copy strong{font-size:28px}.mf-card-button{font-size:10px;padding:10px 12px}.mf-card-button span{display:none}.mf-case-hero{margin-top:35px;border-radius:20px}.mf-case-intro h2{font-size:15vw}.mf-case-intro p{font-size:16px}}
