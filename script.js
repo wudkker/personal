@@ -22,8 +22,7 @@ if(words){
     words.classList.add('change');
     setTimeout(()=>{
       i=(i+1)%list.length;
-      words.textContent=list[i];
-      if(dot) words.parentElement.appendChild(dot);
+      words.firstChild.nodeValue=list[i];
       words.classList.remove('change');
     },250);
   },2200);

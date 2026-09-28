@@ -22,7 +22,7 @@
 .hero h1 .hero-swap-line{display:block}
 .hero h1 .swap{white-space:nowrap;color:#758a78}
 .hero h1 .swap-dot{color:#758a78;display:inline-block;margin-left:.015em}
-.hero h1 .swap.change .swap-dot{color:#2e4633}
+.hero h1 .swap.change .swap-dot{color:#758a78!important}
 .case-trigger,.service-trigger{appearance:none;-webkit-appearance:none;font:inherit;color:inherit;text-align:left;border-radius:0;cursor:none}
 .case-trigger{width:100%;border:0}
 .service-trigger{width:100%;border:1px solid rgba(20,20,20,.07)}
@@ -361,3 +361,34 @@ body.route-open{overflow:hidden}
   .detail-lead{font-size:24px}
 }
 .service-card:hover,.project-link:hover,.contact-btn:hover{translate:var(--hover-x,0) 0;}
+/* STEP 1 — first block object: compact, contained typography */
+.about-visual .text-visual{
+  width:min(330px,100%)!important;
+  min-height:380px!important;
+  height:380px!important;
+  border-radius:190px 190px 26px 26px!important;
+  padding:54px 34px 58px!important;
+  flex-direction:column!important;
+  gap:7px!important;
+  text-align:center;
+}
+.about-visual .text-visual span{
+  display:block;
+  font-size:clamp(18px,2vw,25px)!important;
+  line-height:1!important;
+  letter-spacing:-.035em!important;
+  white-space:nowrap;
+}
+.about-visual .text-visual strong{
+  display:block;
+  font-size:17px!important;
+  line-height:1!important;
+  color:#8da08f!important;
+}
+.about-visual .text-visual small{
+  left:20px!important;
+  right:20px!important;
+  bottom:24px!important;
+  text-align:center;
+  white-space:nowrap;
+}
