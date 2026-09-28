@@ -474,3 +474,56 @@ body.route-open{overflow:hidden}
 }
 
 .service-card:hover,.project-link:hover,.contact-btn:hover{transition-property:transform,translate,border-color,background,color!important}
+
+
+/* STEP 5 — project CTA cleanup only */
+.horizontal-section .minimal-link{
+  margin-top:34px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:24px;
+  min-width:148px;
+  padding:11px 13px 11px 15px;
+  border:1px solid rgba(25,25,24,.18);
+  border-radius:999px;
+  background:transparent;
+  text-decoration:none;
+  font-size:11px;
+  line-height:1;
+  letter-spacing:.01em;
+  transition:transform .6s cubic-bezier(.22,.75,.2,1),
+             border-color .45s ease,
+             background-color .45s ease,
+             color .45s ease;
+}
+.horizontal-section .minimal-link span{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:20px;
+  height:20px;
+  flex:0 0 20px;
+  font-size:13px;
+  line-height:1;
+  transition:transform .6s cubic-bezier(.22,.75,.2,1);
+}
+.horizontal-section .minimal-link:hover{
+  transform:translateX(5px);
+  border-color:rgba(25,25,24,.42);
+  background:rgba(25,25,24,.035);
+}
+.horizontal-section .minimal-link:hover span{transform:translate(2px,-2px);}
+.slide-dark .minimal-link{
+  border-color:rgba(242,241,238,.22)!important;
+  background:transparent!important;
+}
+.slide-dark .minimal-link:hover{
+  border-color:rgba(242,241,238,.5)!important;
+  background:rgba(242,241,238,.06)!important;
+}
+/* The whole project visual remains clickable, but no second floating CTA is rendered inside it. */
+.horizontal-section .project-link:after{display:none!important;}
+@media(max-width:900px){
+  .horizontal-section .minimal-link{margin-top:25px;min-width:142px;padding:10px 12px 10px 14px;}
+}
