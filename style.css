@@ -411,3 +411,30 @@ body.route-open{overflow:hidden}
 .process-object-label{position:absolute;z-index:5;width:24px;height:24px;border:1px solid rgba(174,187,174,.22);border-radius:50%;display:grid;place-items:center;font-size:8px;color:#aebbae;background:rgba(23,25,23,.72);backdrop-filter:blur(6px)}.label-a{left:calc(50% - 138px);top:50%}.label-b{right:calc(50% - 136px);top:38%}
 .process-panel + .steps{margin-top:0!important;grid-template-columns:1fr 1fr!important}.process-panel + .steps .step{min-height:150px!important;padding:15px 18px 24px 0!important}.process-panel + .steps .step h3{margin:34px 0 7px!important;font-size:24px!important}.process-panel + .steps .step p{max-width:250px!important}
 @media(max-width:900px){.process-panel{height:360px!important;min-height:360px!important;padding:26px 24px!important}.process-flow{grid-template-columns:1fr!important;gap:10px!important;padding:0!important}.process-connector{display:none!important}.process-object-wrap{position:absolute!important;right:7%;bottom:16px;width:46%;min-height:150px!important}.process-object{width:94px!important;height:94px!important}.face-front{transform:translateZ(47px)}.face-back{transform:rotateY(180deg) translateZ(47px)}.face-right{transform:rotateY(90deg) translateZ(47px)}.face-left{transform:rotateY(-90deg) translateZ(47px)}.face-top{transform:rotateX(90deg) translateZ(47px)}.face-bottom{transform:rotateX(-90deg) translateZ(47px)}.process-panel + .steps{grid-template-columns:1fr!important}.process-panel + .steps .step{min-height:160px!important}}
+
+
+/* STEP 3 — minimal process + real internal navigation */
+/* Process: only a clean, precise diagram. No 3D object, no decorative orbits. */
+.process-panel{height:190px!important;min-height:190px!important;padding:30px 34px!important;border-radius:24px!important;background:#181a18!important;border:1px solid rgba(174,187,174,.14)!important;display:flex!important;align-items:center!important;overflow:hidden!important;box-shadow:none!important}
+.process-panel:before{display:none!important}
+.process-flow{display:grid!important;grid-template-columns:minmax(0,1fr) 58px minmax(0,1fr) 58px minmax(0,1fr)!important;align-items:center!important;width:100%!important;padding:0!important;gap:0!important}
+.process-stage{gap:7px!important;position:relative!important}
+.process-stage span{font-size:9px!important;letter-spacing:.14em!important;color:#737b73!important}
+.process-stage strong{font-size:clamp(25px,2.5vw,40px)!important;line-height:.9!important;letter-spacing:-.055em!important;color:#f1f0ec!important}
+.process-stage small{font-size:9px!important;letter-spacing:.08em!important;color:#7f867e!important}
+.process-connector{height:1px!important;display:block!important;position:relative!important;margin:0 12px!important}
+.process-connector i{width:100%!important;height:1px!important;background:rgba(174,187,174,.34)!important}
+.process-connector b{width:auto!important;height:auto!important;right:-3px!important;background:#181a18!important;color:#aebbae!important;border-radius:0!important;font-size:12px!important;padding:0 0 0 8px!important}
+.process-minimal-note{display:none!important}
+/* Ensure the service and project cards are true links, not button-like controls. */
+.service-card,.project-link{display:block!important;text-decoration:none!important;color:inherit!important;appearance:none!important;-webkit-appearance:none!important}
+.service-card{width:100%!important}
+.project-link{height:58vh!important;max-height:620px!important}
+/* Keep the visual language of the small project CTAs minimal. */
+.minimal-link{border:0!important;border-radius:0!important;padding:0!important;background:none!important;box-shadow:none!important}
+.minimal-link:hover{background:none!important;border:0!important}
+@media(max-width:900px){
+  .process-panel{height:auto!important;min-height:260px!important;padding:28px 24px!important;align-items:flex-start!important}
+  .process-flow{grid-template-columns:1fr!important;gap:20px!important}
+  .process-connector{display:none!important}
+}

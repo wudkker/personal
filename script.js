@@ -74,3 +74,23 @@ $$('.service-card,.project-link,.contact-btn').forEach(el=>{
   });
   el.addEventListener('pointerleave',()=>el.style.removeProperty('--hover-x'));
 });
+
+
+/* STEP 3 navigation: return to the exact section position after detail pages. */
+document.addEventListener('click',e=>{
+  const link=e.target.closest('a[href]');
+  if(!link) return;
+  const href=link.getAttribute('href')||'';
+  if(/^(service-|project-).+\.html(?:#.*)?$/.test(href)){
+    sessionStorage.setItem('siteReturnScroll', String(window.scrollY));
+    sessionStorage.setItem('siteReturnHash', href.includes('#') ? href.split('#')[1] : 'top');
+  }
+});
+if(location.pathname.endsWith('/index.html') || location.pathname.endsWith('/personal/') || location.pathname.endsWith('/personal')){
+  const saved=sessionStorage.getItem('siteReturnScroll');
+  if(saved!==null && performance.getEntriesByType('navigation')[0]?.type==='back_forward'){
+    requestAnimationFrame(()=>requestAnimationFrame(()=>window.scrollTo({top:Number(saved),behavior:'instant'})));
+    sessionStorage.removeItem('siteReturnScroll');
+    sessionStorage.removeItem('siteReturnHash');
+  }
+}
